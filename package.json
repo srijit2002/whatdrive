@@ -1,0 +1,21 @@
+{
+  "name": "whatdrive",
+  "version": "1.0.0",
+  "description": "upload files to google drive directly from whatsapp",
+  "main": "app.js",
+  "scripts": {
+    "dev-server": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Srijit Mondal",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "googleapis": "^95.0.0"
+  },
+  "engines": {
+    "node": "14.17"
+  }
+}
