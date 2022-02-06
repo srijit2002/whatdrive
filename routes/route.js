@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.post("/upload", async (req, res) => {
   const { url, filetype } = req.body;
-  const filename = `${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()}.${path.basename(filetype)}`;
+  const filename = `${new Date().getDate()}${new Date().getMonth()}${new Date().getFullYear()}.${path.basename(filetype)}`;
   const localfilepath = path.join(__dirname, "../", "public", filename);
   await downloadFile(url,localfilepath);
   await uploadFile(localfilepath,filetype,filename,driveInstance);
