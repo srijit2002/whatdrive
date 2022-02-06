@@ -1,6 +1,5 @@
 const fs=require("fs");
 const uploadFile=async(filepath,filetype,filename,driveInstance)=>{
-   if(!fs.existsSync(filepath))return; 
    try {
        await driveInstance.files.create({
             requestBody:{
@@ -9,7 +8,7 @@ const uploadFile=async(filepath,filetype,filename,driveInstance)=>{
             },
             media:{
                 MimeType:filetype,
-                body:fs.createReadStream(filepath)
+                body:filepath
             } 
        })
    } catch (error) {
